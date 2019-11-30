@@ -434,22 +434,22 @@ height:43px;
 
 
 .one {
-  background: url(http://10.28.0.52:3000/images/ipad_banner-small.jpg) no-repeat center center;
+  background: url('../images/ipad_banner-small.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .two {
-  background: url(http://10.28.0.52:3000/images/overshoulder.jpg) no-repeat center center;
+  background: url('./images/overshoulder.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .three {
-  background: url(http://10.28.0.52:3000/images/logscapethree.jpg) no-repeat center center;
+  background: url('./images/logscapethree.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .four {
-  background: url(http://10.28.0.52:3000/images/livetailer.png) no-repeat center center;
+  background: url('./images/livetailer.png') no-repeat center center;
   background-size: cover;
 }
 
