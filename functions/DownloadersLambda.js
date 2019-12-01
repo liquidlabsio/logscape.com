@@ -4,20 +4,23 @@ var ses = new AWS.SES()
 var RECEIVER = 'support@logscape.com'
 var SENDER = 'support@logscape.com'
 
-// need to enable CORS for testing
 
 exports.handler = function (event, context) {
     console.log("Download handler received:" + JSON.stringify(event))
-    sendEmail(event, function (err, data) {
 
-        console.log("finished sending email....")
+    console.log("1111emailing:"  + JSON.stringify(event.email) )
+
+    sendEmail(event, function (err, data) {
         if (err) {
             console.log("FAILED SENDING:" + err);
             context.fail(err);
         } else {
 
             console.log("SUCCESS SENDING:" + JSON.stringify(data));
-            context.succeed(event);
+            var win64 = "<a target='_blank' href='https://logscape-releases.s3-eu-west-1.amazonaws.com/Logscape-3.12_b0229-x64-setup.msi'> Windows - Logscape-3.12_b0229-x64-setup.msi 188mb</a>";
+            var unix =  "<a target='_blank' href='https://logscape-releases.s3-eu-west-1.amazonaws.com/Logscape-3.12_b0229.zip'> Linux.Unix.MacOS - Logscape-3.12_b0229.zip 188mb</a>";
+
+            context.succeed("<br>" + win64 + "<br>" + unix);
         }
     })
     const response = {
@@ -26,28 +29,21 @@ exports.handler = function (event, context) {
     };
     return response;
 }
-//  var data = {
-//         name: $('#name-input').val(),
-//         email: $('#email-input').val(),
-//       + "\nRole: " + JSON.stringify(event.role)
-//         company: $('#company-input').val(),
-//         country: $('#country-input').val(),
-//         ip: $('#ip-input').val(),
-//         reason: $('#reason-input').val(),
-//     }
+
 function sendEmail (event, done) {
+
+    //console.log("emailing:" +  RECEIVER, "'" + JSON.stringify(event.email) +  "'")
     var params = {
         Destination: {
             ToAddresses: [
                 RECEIVER
-            ]
+        ]
         },
         Message: {
             Body: {
                 Text: {
                     Data: "From: " + JSON.stringify(event.name) + "\nEmail: " + JSON.stringify(event.email)
                     +  "\nCompany: " + JSON.stringify(event.company) +  "\nRole: " + JSON.stringify(event.role)
-                    + "\nCountry: " + JSON.stringify(event.country) + "\nIP: " + JSON.stringify(event.ip)
                     + "\nReason: " + JSON.stringify(event.reason),
                     Charset: 'UTF-8'
                 }
