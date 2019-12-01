@@ -1,8 +1,8 @@
 var AWS = require('aws-sdk')
 var ses = new AWS.SES()
 
-var RECEIVER = 'support@logscape.com'
-var SENDER = 'support@logscape.com'
+var RECEIVER = 'contact@liquidlabs.com'
+var SENDER = 'contact@liquidlabs.com'
 
 
 exports.handler = function (event, context) {
