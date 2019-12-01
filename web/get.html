@@ -490,7 +490,7 @@
     <br />
   </div>
 </div>
-<meta content='www.logscape.com/images/logscapethree.jpg' name='twitter:image' />
+<meta content='./images/logscapethree.jpg' name='twitter:image' />
   </body>
   <!-- Bottom Section -->
   <section id='bottom'>
@@ -573,7 +573,7 @@
   </script>
 <script language="JavaScript">
 window.onload = function () { 
-    var URL = 'https://avp5fdbn6k.execute-api.eu-west-1.amazonaws.com/prod/logscape/'
+      var URL = 'https://oiwokr0lgb.execute-api.eu-west-1.amazonaws.com/prod/requestdownload'
 
     $('#download-form').submit(function (event) {
       event.preventDefault()
@@ -592,12 +592,15 @@ window.onload = function () {
       $.ajax({
         type: 'POST',
         url: URL,
+        async: false,
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify(data),
-        success: function () {
+        success: function (data) {
+             alert("Check your email and here are the links:" +  JSON.stringify(data));
         },
         error: function () {
+        alert("download ERROR - check the spam folder:" + data);
         }
       })
     })

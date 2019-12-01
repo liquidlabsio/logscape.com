@@ -274,12 +274,13 @@
 
             $.ajax({
               type:"POST",url:urll,dataType:"json",
+              async: false,
               contentType:"application/json",data:JSON.stringify(contactInfo),
-              success:function(){
-                alert("email sent - remember to check the spam folder");
+              success:function(data){
+                alert("email sent - remember to check the spam folder:" + data);
               },
-              error:function(){
-                alert("email failed - remember to check the spam folder");
+              error:function(data){
+                alert("email failed - remember to check the spam folder:" + data);
               }
             })
             })};
