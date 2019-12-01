@@ -24,8 +24,6 @@
   <link href='css/custom-styles.css' rel='stylesheet' />
   <script src='js/modernizr-2.6.2-respond-1.1.0.min.js'></script>
   <script src='js/jquery-1.9.1.js'></script>
-  <link href='../vjs.zencdn.net/c/video-js.css' rel='stylesheet' />
-  <script src='../vjs.zencdn.net/c/video.js'></script>
   <!-- Fav and touch icons -->
   <link href='apple-touch-icon-144-precomposed.html' rel='apple-touch-icon-precomposed' sizes='144x144' />
   <link href='apple-touch-icon-114-precomposed.html' rel='apple-touch-icon-precomposed' sizes='114x114' />
@@ -33,12 +31,12 @@
   <link href='apple-touch-icon-57-precomposed.html' rel='apple-touch-icon-precomposed' />
   <link href='favicon.ico' rel='shortcut icon' />
   <!-- Google Translate -->
-  <script src='../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit'></script>
-  <script type='text/javascript'>
-    function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-  </script>
+<!--  <script src='../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit'></script>-->
+<!--  <script type='text/javascript'>-->
+<!--    function googleTranslateElementInit() {-->
+<!--            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');-->
+<!--        }-->
+<!--  </script>-->
 </head>
   <body data-spy='scroll' data-target='.navbar' id='top'>
     <div class='navbar navbar-inverse navbar-fixed-top'>
@@ -55,7 +53,7 @@
         <span class='icon-bar'>
           <div class='span3 offset1' style='padding:0px;margin-left:0px;'>
             <a class='brand brand2' href='index.html' style='background-color: #111;border-radius:2px;height:28px;width:40px'>
-              <img alt='logo' src='/images/logo-small.png' />
+              <img alt='logo' src='./images/logo-small.png' />
             </a>
             <a class='brand' href='index.html' style='margin-top:3px; font-family:Arial; text-transform:none; font-size:28px; font-weight:100;'>
               Logscape
@@ -249,7 +247,7 @@
   <script src='js/jquery.flexslider-min.js'></script>
   <script src='js/rotate.js'></script>
   <script src='js/twitter-feed.js'></script>
-  <script src='javascripts/payment.html'></script>
+<!--  <script src='javascripts/payment.html'></script>-->
   <script src='javascripts/application.js'></script>
   <script src='javascripts/google-analytics.js'></script>
   <script type='text/javascript'>
@@ -265,8 +263,25 @@
     //]]>
   </script>
   <script>
-  window.onload=function(){$("#contact-form").submit(function(b){b.preventDefault();var c={name:$("#name-input").val(),email:$("#email-input").val(),msg:$("#message-input").val()};$.ajax({type:"POST",url:"https://77pt4hfzc7.execute-api.eu-west-1.amazonaws.com/prod/contactus/",dataType:"json",contentType:"application/json",data:JSON.stringify(c),success:function(){},error:function(){}})})};
-  </script>
+  window.onload=function(){
+    $("#contact-form").submit(
+            function(b){
+              b.preventDefault();
+              var contactInfo={name:$("#name-input").val(),email:$("#email-input").val(),msg:$("#message-input").val()};
+              var urll = "https://77pt4hfzc7.execute-api.eu-west-1.amazonaws.com/prod/contactus";
+              console.log("contactus:" + urll);
+              console.log("message:" + JSON.stringify(contactInfo));
 
-<!-- Mirrored from 10.28.0.52:3000/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 May 2017 16:01:22 GMT -->
+            $.ajax({
+              type:"POST",url:urll,dataType:"json",
+              contentType:"application/json",data:JSON.stringify(contactInfo),
+              success:function(){
+                alert("email sent - remember to check the spam folder");
+              },
+              error:function(){
+                alert("email failed - remember to check the spam folder");
+              }
+            })
+            })};
+  </script>
 </html>

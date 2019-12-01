@@ -574,7 +574,7 @@
 <script language="JavaScript">
 window.onload = function () { 
     var URL = 'https://avp5fdbn6k.execute-api.eu-west-1.amazonaws.com/prod/logscape/'
-     
+
     $('#download-form').submit(function (event) {
       event.preventDefault()
      
@@ -587,6 +587,8 @@ window.onload = function () {
         reason: $('#reason-input').val(),
         role: $('#role-input').val()   
     }
+    console.log("URL:" + URL)
+    console.log("Sending:" + JSON.stringify(data))
       $.ajax({
         type: 'POST',
         url: URL,
