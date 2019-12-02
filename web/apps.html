@@ -41,10 +41,11 @@
     <div class='navbar navbar-inverse navbar-fixed-top'>
 
   <div class='navbar-inner'>
-    <a id='google_translate_element' style='float:right'></a>
     <div class='container'>
       <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
-        <span class='icon-bar'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
           <div class='offset1' style='padding:0px;margin-left:0px;'>
             <a class='brand brand2' href='index.html' style='background-color: #111;border-radius:2px;height:28px;width:40px'>
               <img alt='logo' src='./images/logo-small.png' />
@@ -53,7 +54,7 @@
               Logscape
             </a>
           </div>
-        </span>
+
       </a>
       <div class='nav-collapse collapse'>
         <ul class='nav pull-right'>
@@ -112,7 +113,7 @@
             </a>
           </li>
           <li style='margin-left:5px'>
-            <a class='btn btn-main' href='https://github.com/logscape/logscape' style='font-weight:initial;text-transform:none;background:#EB6B56; padding: 8px 8px; margin-top: 7px; margin-bottom: 3px;'>
+            <a class='btn btn-main' target="_blank" href='https://github.com/logscape/logscape' style='font-weight:initial;text-transform:none;background:#EB6B56; padding: 8px 8px; margin-top: 7px; margin-bottom: 3px;'>
               Open Source
             </a>
           </li>
@@ -130,8 +131,15 @@
         <br />
       </div>
     </div>
+
+  <div class='span12 offset1'>
+    <br />
+    <p style='font-size: 18px'>
+      Below are some examples from the <a href='http://apps.logscape.com/'>Apps Repository</a>
+    </p>
+  </div>
     <div class='container text-center'>
-      <div class='row margin-40'>
+      <div class='row '>
         <!-- Project Thumbnail One -->
         <div class='span4'>
           <div class='thumbs'>
@@ -144,7 +152,7 @@
               </span>
             </a>
           </div>
-          <div class='project-title margin-30'>
+          <div class='project-title margin-10'>
             <h4>
               Unix
               &nbsp;
@@ -197,12 +205,8 @@
           </div>
         </div>
       </div>
-      <div class='row margin-40'>
-        <div class='span12'>
-          <br />
-        </div>
-      </div>
-      <div class='row margin-40'>
+
+      <div class='row'>
         <div class='span4'>
           <div class='thumbs'>
             <img alt='Coherence App Home' src='./images/coherence_app.png' />
@@ -267,53 +271,9 @@
           </div>
         </div>
       </div>
-      <div class='row margin-40'>
-        <div class='span12'>
-          <br />
-        </div>
-      </div>
-      <div class='row margin-40'>
-        <div class='span4'>
-          <div class='thumbs'>
-            <img alt='Cisco App Home' src='./images/cisco_app.png' />
-            <a data-toggle='modal' href='#theLightBoxCiscoAppScreenshot'>
-              <span class='title'>
-                <span>
-                  <i class='icon-link icon-2x'></i>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class='project-title margin-30'>
-            <h4>
-              Cisco Devices
-              &nbsp;
-              <a href='https://github.com/logscape/ciscoapp#ciscoapp-10' target='_blank'>
-                <i class='icon-chevron-sign-right'></i>
-              </a>
-            </h4>
-          </div>
-        </div>
-        <div class='span8'>
-          <br />
-          <br />
-          <h2>More...</h2>
-          <br />
-          <p style='font-size: 18px'>
-            Don’t see what you’re looking for?
-            Visit our
-            <a href='http://apps.logscape.com/'>Apps Repository</a>
-            or
-          </p>
-          <br />
-          <a class='btn btn-main' href='contact.html' style='text-transform: none;'>
-            Contact Us
-            <i class='icon-chevron-right'></i>
-          </a>
-        </div>
-      </div>
+ 
     </div>
-    <div class='modal hide' id='theLightBoxUnixAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxUnixAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -323,7 +283,7 @@
         <img height='900px' src='./images/unix_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxWindowsAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxWindowsAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -333,7 +293,7 @@
         <img height='900px' src='./images/windows_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxJavaAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxJavaAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -343,7 +303,7 @@
         <img height='900px' src='./images/java_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxCoherenceAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxCoherenceAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -353,7 +313,7 @@
         <img height='900px' src='./images/coherence_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxVMWareAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxVMWareAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -363,7 +323,7 @@
         <img height='900px' src='./images/vmware_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxWeblogsAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxWeblogsAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;
@@ -373,7 +333,7 @@
         <img height='900px' src='./images/weblogs_app.png' width='1200px' />
       </div>
     </div>
-    <div class='modal hide' id='theLightBoxCiscoAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
+    <div class='modal hide app-popup-images' id='theLightBoxCiscoAppScreenshot'>
       <div class='modal-header'>
         <button class='close' data-dismiss='modal' type='button'>
           &times;

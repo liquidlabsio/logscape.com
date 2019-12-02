@@ -463,7 +463,7 @@ height:30px;
   position: static;
   max-width: 1050px;
   padding: 0 20px;
-  margin-top: 58vh;
+  margin-top: 42vh;
 }
 
 
@@ -506,6 +506,9 @@ height:30px;
   padding-bottom: 40px;
 }
 
+.app-popup-images {
+    width: 900px; height: 600px; top: 5%; left: 30%;
+}
 
 /* ==========================================================================
    Blog Styles
