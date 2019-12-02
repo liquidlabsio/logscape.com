@@ -24,38 +24,30 @@
   <link href='css/custom-styles.css' rel='stylesheet' />
   <script src='js/modernizr-2.6.2-respond-1.1.0.min.js'></script>
   <script src='js/jquery-1.9.1.js'></script>
-  <link href='../vjs.zencdn.net/c/video-js.css' rel='stylesheet' />
-  <script src='../vjs.zencdn.net/c/video.js'></script>
   <!-- Fav and touch icons -->
   <link href='apple-touch-icon-144-precomposed.html' rel='apple-touch-icon-precomposed' sizes='144x144' />
   <link href='apple-touch-icon-114-precomposed.html' rel='apple-touch-icon-precomposed' sizes='114x114' />
   <link href='apple-touch-icon-72-precomposed.html' rel='apple-touch-icon-precomposed' sizes='72x72' />
   <link href='apple-touch-icon-57-precomposed.html' rel='apple-touch-icon-precomposed' />
   <link href='favicon.ico' rel='shortcut icon' />
-  <!-- Google Translate -->
-  <script src='../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit'></script>
-  <script type='text/javascript'>
-    function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-  </script>
 </head>
   <body data-spy='scroll' data-target='.navbar' id='top'>
-    <div class='navbar navbar-inverse navbar-fixed-top'>
-  <div id='cookie-warning' style='text-align:center;background-color: #1c455f;'>
+  <div id="cookie-warning" class="cookie-warning">
     <p style='display:inline;'>Please note, this website uses cookies.</p>
     <a href='#'>
-      <i class='icon-remove white' id='toggle-cookie' style='vertical-align:top;'></i>
+      <i class='icon-remove white' id='toggle-cookie'></i>
     </a>
   </div>
+    <div class='navbar navbar-inverse navbar-fixed-top'>
+
   <div class='navbar-inner'>
     <a id='google_translate_element' style='float:right'></a>
     <div class='container'>
       <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
         <span class='icon-bar'>
-          <div class='span3 offset1' style='padding:0px;margin-left:0px;'>
+          <div class='offset1' style='padding:0px;margin-left:0px;'>
             <a class='brand brand2' href='index.html' style='background-color: #111;border-radius:2px;height:28px;width:40px'>
-              <img alt='logo' src='/images/logo-small.png' />
+              <img alt='logo' src='./images/logo-small.png' />
             </a>
             <a class='brand' href='index.html' style='margin-top:3px; font-family:Arial; text-transform:none; font-size:28px; font-weight:100;'>
               Logscape
@@ -79,9 +71,6 @@
           </li>
           <li>
             <a class='scroll' href='index.html#pricing'>Pricing</a>
-          </li>
-          <li>
-            <a class='scroll'>&nbsp;|&nbsp;</a>
           </li>
           <li>
             <a href='http://blog.logscape.com/' target='_blank'>Blog</a>
@@ -115,9 +104,6 @@
               <li>
                 <a href='http://support.logscape.com/' target='_blank'>Documentation</a>
               </li>
-              <li>
-                <a href='http://forums.logscape.com/' target='_blank'>Forums</a>
-              </li>
             </ul>
           </li>
           <li>
@@ -149,7 +135,7 @@
         <!-- Project Thumbnail One -->
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Image Size 430x280' src='/images/unix_app.png' />
+            <img alt='Image Size 430x280' src='./images/unix_app.png' />
             <a data-toggle='modal' href='#theLightBoxUnixAppScreenshot'>
               <span class='title'>
                 <span>
@@ -170,7 +156,7 @@
         </div>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Image Size 430x280' src='/images/windows_app.png' />
+            <img alt='Image Size 430x280' src='./images/windows_app.png' />
             <a data-toggle='modal' href='#theLightBoxWindowsAppScreenshot'>
               <span class='title'>
                 <span>
@@ -191,7 +177,7 @@
         </div>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Image Size 430x280' src='/images/java_app.png' />
+            <img alt='Image Size 430x280' src='./images/java_app.png' />
             <a data-toggle='modal' href='#theLightBoxJavaAppScreenshot'>
               <span class='title'>
                 <span>
@@ -219,7 +205,7 @@
       <div class='row margin-40'>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Coherence App Home' src='/images/coherence_app.png' />
+            <img alt='Coherence App Home' src='./images/coherence_app.png' />
             <a data-toggle='modal' href='#theLightBoxCoherenceAppScreenshot'>
               <span class='title'>
                 <span>
@@ -240,7 +226,7 @@
         </div>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='VMWare App Home' height='280px' src='/images/vmware_app.png' width='430px' />
+            <img alt='VMWare App Home' height='280px' src='./images/vmware_app.png' width='430px' />
             <a data-toggle='modal' href='#theLightBoxVMWareAppScreenshot'>
               <span class='title'>
                 <span>
@@ -261,7 +247,7 @@
         </div>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Weblogs App Home' src='/images/weblogs_app.png' />
+            <img alt='Weblogs App Home' src='./images/weblogs_app.png' />
             <a data-toggle='modal' href='#theLightBoxWeblogsAppScreenshot'>
               <span class='title'>
                 <span>
@@ -289,7 +275,7 @@
       <div class='row margin-40'>
         <div class='span4'>
           <div class='thumbs'>
-            <img alt='Cisco App Home' src='/images/cisco_app.png' />
+            <img alt='Cisco App Home' src='./images/cisco_app.png' />
             <a data-toggle='modal' href='#theLightBoxCiscoAppScreenshot'>
               <span class='title'>
                 <span>
@@ -334,7 +320,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/unix_app.png' width='1200px' />
+        <img height='900px' src='./images/unix_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxWindowsAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -344,7 +330,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/windows_app.png' width='1200px' />
+        <img height='900px' src='./images/windows_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxJavaAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -354,7 +340,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/java_app.png' width='1200px' />
+        <img height='900px' src='./images/java_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxCoherenceAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -364,7 +350,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/coherence_app.png' width='1200px' />
+        <img height='900px' src='./images/coherence_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxVMWareAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -374,7 +360,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/vmware_app.png' width='1200px' />
+        <img height='900px' src='./images/vmware_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxWeblogsAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -384,7 +370,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/weblogs_app.png' width='1200px' />
+        <img height='900px' src='./images/weblogs_app.png' width='1200px' />
       </div>
     </div>
     <div class='modal hide' id='theLightBoxCiscoAppScreenshot' style='width: 1200px; height: 900px; top: 5%; left: 38%'>
@@ -394,7 +380,7 @@
         </button>
       </div>
       <div class='modal-body' style='padding-right: 0px; padding-left: 25px; max-height: 900px'>
-        <img height='900px' src='/images/cisco_app.png' width='1200px' />
+        <img height='900px' src='./images/cisco_app.png' width='1200px' />
       </div>
     </div>
   </body>
