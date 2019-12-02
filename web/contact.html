@@ -277,10 +277,11 @@
               async: false,
               contentType:"application/json",data:JSON.stringify(contactInfo),
               success:function(data){
-                alert("email sent - remember to check the spam folder:" + data);
+                $("#contact-form").hide();
+               alert("Thanks for contacting us!");
               },
               error:function(data){
-                alert("email failed - remember to check the spam folder:" + data);
+               // alert("email failed - remember to check the spam folder:" + data);
               }
             })
             })};
